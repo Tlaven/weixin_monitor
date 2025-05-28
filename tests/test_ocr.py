@@ -14,7 +14,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class OCRTester:
-    def __init__(self, screenshot_folder: str):
+    def __init__(self, screenshot_folder):
         """Initialize with the folder containing screenshots."""
         self.screenshot_folder = screenshot_folder
         # Initialize PaddleOCR with Chinese model
@@ -26,7 +26,7 @@ class OCRTester:
         )
         logger.info(f"Initialized OCRTester with screenshot folder: {screenshot_folder}")
 
-    def preprocess_image(self, img: Image.Image):
+    def preprocess_image(self, img):
         """Preprocess image for better OCR accuracy."""
         try:
             # Convert PIL Image to OpenCV format
@@ -46,7 +46,7 @@ class OCRTester:
             logger.error(f"Image preprocessing failed: {e}")
             return None
 
-    def extract_text(self, image_path: str):
+    def extract_text(self, image_path):
         """Extract text from an image using PaddleOCR."""
         try:
             # Open image

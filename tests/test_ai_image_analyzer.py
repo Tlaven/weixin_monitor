@@ -7,13 +7,13 @@ import os
 
 
 class DashscopeAnalyzer():
-    def __init__(self, api_key: str = None, base_url: str = None):
+    def __init__(self, api_key = None, base_url = None):
         self.api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
         self.base_url = base_url
         print(self.base_url)
         self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
 
-    def analyze_image(self, image_data: str, prompt: str) -> str:
+    def analyze_image(self, image_data, prompt):
         """调用Dashscope API分析图像"""
         try:
             completion = self.client.chat.completions.create(
@@ -37,7 +37,7 @@ class DashscopeAnalyzer():
 
 def main():
     """Run the AI test."""
-    screenshot_path = "tests\screenshot_20250515_220101.png"
+    screenshot_path = r"tests\screenshot_20250515_220101.png"
     image = Image.open(screenshot_path)
     from io import BytesIO
     buffered = BytesIO()

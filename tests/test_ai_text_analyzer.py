@@ -6,12 +6,12 @@ import os
 
 
 class TestDashscopeAnalyzer:
-    def __init__(self, api_key: str = None, base_url: str = None):
+    def __init__(self, api_key = None, base_url = None):
         self.api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
         self.base_url = base_url
         self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
 
-    def analyze_image(self, prompt: str, chat_text: str) -> str:
+    def analyze_image(self, prompt, chat_text):
         """调用Dashscope API分析图像"""
         try:
             completion = self.client.chat.completions.create(

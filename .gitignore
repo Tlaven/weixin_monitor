@@ -19,17 +19,13 @@ logs/
 *.log
 
 # Configuration files with sensitive data
-config/config.py
 *.env
 
 # Output directories from the project
 screenshots/
 judgments/
 ocr_results/
-ocr_results.json
-
-# Alert sound file
-alert.wav
+*.json
 
 # IDE and editor files
 .vscode/
@@ -41,8 +37,8 @@ alert.wav
 .DS_Store
 Thumbs.db
 
-# Poetry lock file
-# poetry.lock
+# Poetry lock file (optional, include if you want to commit it)
+poetry.lock
 
 # Miscellaneous
 *.bak

@@ -1,0 +1,22 @@
+# 外部配置文件
+
+app:
+  window_title: "企业微信"
+  details_window_title: "转发消息详情"
+  polling_interval: 5  # 监控间隔（秒）
+paths:
+  screenshots: "./screenshots"
+  judgments: "./judgments"
+  logs: "./logs"
+  ocr_results: "./logs"
+ai:
+  model: "qwen-turbo-latest"
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  prompt: "The above is part of the chat record. Based on this, please guess whether Python should be used to solve the content description in the text? Please answer 'yes', 'no' or 'not sure'."
+chat_box:
+  x: 310
+  y_offset: -290
+  width: 330
+  height: 150
+thresholds:
+  change_detection: 5000

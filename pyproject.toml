@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "weixin_monitor"
+version = "0.1.0"
+description = "WeChat monitoring project"
+authors = ["Tlaven <2515406347@qq.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+paddleocr = "^2.8.1"
+paddlepaddle = "^2.6.1"
+opencv-python = "^4.10.0"
+pillow = "^10.4.0"
+numpy = "^1.26.4"
+openai = "^1.8.0"
+pywin32 = "^306"
+setuptools = "^80.2.0"
+pygame = "^2.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

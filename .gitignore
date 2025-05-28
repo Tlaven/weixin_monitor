@@ -1,0 +1,50 @@
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.so
+
+# Poetry virtual environment
+.env/
+venv/
+.venv/
+
+# Logs
+logs/
+*.log
+
+# Configuration files with sensitive data
+config/config.py
+*.env
+
+# Output directories from the project
+screenshots/
+judgments/
+ocr_results/
+*.json
+
+# Alert sound file
+alert.wav
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Poetry lock file (optional, include if you want to commit it)
+# poetry.lock
+
+# Miscellaneous
+*.bak
+*.swp
+*~

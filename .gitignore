@@ -26,7 +26,7 @@ config/config.py
 screenshots/
 judgments/
 ocr_results/
-*.json
+ocr_results.json
 
 # Alert sound file
 alert.wav
@@ -41,10 +41,12 @@ alert.wav
 .DS_Store
 Thumbs.db
 
-# Poetry lock file (optional, include if you want to commit it)
+# Poetry lock file
 # poetry.lock
 
 # Miscellaneous
 *.bak
 *.swp
 *~
+*.png
+*.jpg
